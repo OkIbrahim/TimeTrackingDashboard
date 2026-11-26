@@ -1,0 +1,267 @@
+:root {
+  --color-purple-600: #5847eb;
+  --color-orange-300: #ff8c66;
+  --color-blue-300: #56c2e6;
+  --color-pink-400: #ff5c7c;
+  --color-green-400: #4acf81;
+  --color-purple-700: #7536d3;
+  --color-yellow-300: #f1c65b;
+  --color-navy-950: #0f1424;
+  --color-navy-900: #1c1f4a;
+  --color-purple-500: #6f76c8;
+  --color-navy-200: #bdc1ff;
+  --color-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-navy-950);
+  color: var(--color-white);
+  font-family: "Rubik", sans-serif;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2.25rem;
+  place-content: center;
+  margin: 10rem;
+}
+
+.profile-card {
+  grid-row: span 2;
+  background-color: var(--color-navy-900);
+  border-radius: 1.5rem;
+}
+
+.profile {
+  height: 70%;
+  background-color: var(--color-purple-600);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  padding-bottom: 4rem;
+}
+
+.profile-img {
+  width: 35%;
+  border-radius: 50%;
+  border: 0.3rem solid var(--color-white);
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.surname {
+  display: block;
+}
+
+.profile-paragraph {
+  margin-top: 3rem;
+  color: var(--color-navy-200);
+  opacity: 0.7;
+  font-size: 1.2rem;
+  font-family: inherit;
+}
+
+.profile-name {
+  margin-top: 0.5rem;
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--color-white);
+}
+
+.timeframe-buttons {
+  height: 30%;
+  background-color: var(--color-navy-900);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.timeframe-buttons button {
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  color: var(--color-purple-500);
+  cursor: pointer;
+}
+
+.timeframe-buttons button.active,
+.timeframe-buttons button:hover {
+  color: var(--color-white);
+}
+
+.active {
+  color: var(--color-white);
+}
+
+.activity-card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-banner {
+  height: 5.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-icon {
+  position: absolute;
+  top: -1rem;
+  right: 1.6rem;
+  height: 6rem;
+}
+
+.activity-content {
+  background-color: var(--color-navy-900);
+  border-radius: 1.5rem;
+  padding: 1.6rem 1.5rem;
+  margin-top: -1.2rem;
+  z-index: 1;
+  flex: 1;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.activity-content:hover {
+  background-color: var(--color-purple-500);
+}
+
+.activity-content:has(button:hover) {
+  background-color: var(--color-navy-900);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.activity-title {
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--color-white);
+  margin: 0;
+  font-family: inherit;
+}
+
+.ellipsis-icon {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.activity-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.current-hours {
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.previous-hours {
+  color: var(--color-navy-200);
+  margin: 0;
+}
+
+@media (max-width: 64em) {
+  .activity-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .current-hours {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  .previous-hours {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 55em) {
+  .app-container {
+    gap: 2rem;
+    margin: 8rem;
+  }
+
+  .current-hours {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .app-container {
+    gap: 1.5rem;
+    margin: 6rem;
+  }
+}
+
+@media (max-width: 45.25em) {
+  .app-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    margin: 6rem;
+  }
+
+  .profile-card {
+    grid-row: auto;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-details {
+    margin-left: auto;
+  }
+
+  .profile-paragraph {
+    margin-top: 0;
+  }
+
+  .profile-name {
+    font-size: 1.8rem;
+  }
+
+  .surname {
+    display: inline;
+  }
+
+  .timeframe-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 1.5rem;
+  padding: 2rem; */
+  }
+}
