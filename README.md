@@ -26,8 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com](https://github.com/OkIbrahim/TimeTrackingDashboard.git)
-<!-- - Live Site URL: [https://vercel.app](https://vercel.app) -->
+- Solution URL: [https://github.com](https://github.com/OkIbrahim/TimeTrackingDashboard.git)                                     - Live Site URL: [https://vercel.app](https://time-tracking-dashboard-two-ebon.vercel.app/)
 
 ## My process
 
